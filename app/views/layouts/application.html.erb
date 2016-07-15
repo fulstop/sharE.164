@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShareMyNumber</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <header class="row">
+      <div class="col-md-4">
+        <h2>Share My Number</h2>
+      </div>
+      <nav class="col-md-8">
+      </nav>
+    </header>
+
+    <div id="main-content">
+      <%= render partial: 'partials/flash_messages' %>
+      <%= yield %>
+    </div>
+
+    <footer class="row">
+      <div class="col-md-12">
+        sharemynumber.com is a <a href="//catalyzelabs.com">Catalyze Labs</a> project.  Copyright &copy; <%= Time.now.year %>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
